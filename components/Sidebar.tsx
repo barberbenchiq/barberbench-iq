@@ -1,3 +1,0 @@
-import Link from "next/link";
-import { BarChart3, Calculator, LayoutDashboard, LogOut, Scissors, Settings, Sparkles } from "lucide-react";
-export function Sidebar(){return <aside className="sidebar"><Link href="/" className="brand light"><span className="brandMark"><Scissors size={20}/></span>BarberBench <b>IQ</b></Link><nav><a className="active"><LayoutDashboard size={19}/>Overview</a><a><BarChart3 size={19}/>Performance</a><a><Calculator size={19}/>Opportunity</a><a><Sparkles size={19}/>IQ Coach</a><a><Settings size={19}/>Settings</a></nav><div className="sidebarFoot"><div className="avatar">BL</div><div><b>Founder account</b><small>Demo workspace</small></div><Link href="/"><LogOut size={18}/></Link></div></aside>}
