@@ -1,0 +1,3 @@
+"use client";
+import type { WeekEntry } from "@/lib/types";
+export function WeeklyForm({value,onChange}:{value:WeekEntry;onChange:(v:WeekEntry)=>void}){const set=(key:keyof WeekEntry,val:string)=>onChange({...value,[key]:key==="label"?val:Number(val)});return <div className="entryForm"><label>Weekly revenue ($)<input type="number" value={value.revenue} onChange={e=>set("revenue",e.target.value)}/></label><label>Clients served<input type="number" value={value.clients} onChange={e=>set("clients",e.target.value)}/></label><label>Hours worked<input type="number" value={value.hours} onChange={e=>set("hours",e.target.value)}/></label><label>Clients rebooked<input type="number" value={value.rebooked} onChange={e=>set("rebooked",e.target.value)}/></label></div>}
